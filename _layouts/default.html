@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Cheatsheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    
+    <script src="{{ '/assets/js/topButton.js' | relative_url }}"></script>
+  </head>
+  
+  <body>
+    <div id="rotate">
+      <p>Please rotate your screen for optimal viewing</p>
+    </div>
+    <div class="container"> 
+      <nav id="navbar">
+      <header class="title">
+          Overview of JavaScript
+        </header>
+        <ul>
+          <li><a href="#Values" class="nav-link">Values</a></li>
+          <li><a href="#Operators" class="nav-link">Operators</a></li>
+          <li><a href="#Variables" class="nav-link">Variables</a></li>
+          <li><a href="#Conditionals" class="nav-link">Conditionals</a></li>
+          <li><a href="#Loops" class="nav-link">Loops</a></li>
+          <li><a href="#Functions" class="nav-link">Functions</a></li>
+          <li><a href="#Data_Structures" class="nav-link">Data Structures</a></li>
+          <li><a href="#JSON" class="nav-link">JSON</a></li>
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+          Top
+        </button>
+        <section id="Values" class="main-section">
+          <header>
+            Values
+          </header>
+          <p>
+            Numbers
+              <pre>
+                <code>
+    13
+    3.14
+    2.998e7
+                </code>
+              </pre>
+          </p>
+          <p>
+            Strings
+            <pre><code>
+    'string1'
+    "It's a string"
+    `These are template literals`
+              </code></pre>
+          </p>
+          <p>
+            Booleans
+            <pre>
+              <code>
+    true
+    false
+              </code>
+            </pre>
+          </p>
+          <p>
+            Special Numbers
+            <pre>
+              <code>
+    Infinity
+    -Infinity
+    NaN
+              </code>
+            </pre>
+          </p>
+          <p>
+            Note: <code class="code-inline">NaN</code> means "Not a Number"
+          </p>
+        </section>
+        <br>
+        <section id="Operators" class="main-section">
+          <header>
+            Operators
+          </header>
+          <p>
+            Arithmetic Operators
+            <pre>
+              <code>
+    +, -, *, /
+              </code>
+            </pre>
+          </p>
+          <p>
+            Comparison Operators
+            <pre>
+              <code>
+    > , < , >= , <= , == , !=
+              </code>
+            </pre>
+          </p>
+          <p>
+            Logical Operators
+            <pre>
+              <code>
+    && , || , !
+              </code>
+            </pre>
+          </p>
+          <p>
+            Ternary Operator
+            <pre>
+              <code>
+    (condition) : if True ? if False
+              </code>
+            </pre>
+          </p>
+        </section>
+        <br>
+        <section id="Variables" class="main-section">
+          <header>
+            Variables
+          </header>
+          <p>
+            Variables
+            <pre>
+              <code>
+    let var1 = 2;
+    const var2 = 6.28;
+    var myVar = 3;
+              </code>
+            </pre>
+          </p>
+          <p>
+            <code class="code-inline">let</code> and <code class="code-inline">const</code> are from the ECMAScript 6 standard, ES6 for short.
+          </p>
+          <p>
+            Comments
+            <pre>
+              <code>
+    // single line
+    /*
+       Multi-line
+    */
+              </code>
+            </pre>
+          </p>
+        </section>
+        <br>
+        <section id="Conditionals" class="main-section">
+          <header>
+            Conditionals
+          </header>
+          <p>
+            if statements
+            <pre>
+              <code>
+    if (conditionalStatement){
+      // Runs if true
+    }
+              </code>
+            </pre>
+          </p>
+          <p>
+            if else statements
+            <pre>
+              <code>
+    if (conditionalStatement){
+      // Runs if true
+    } else {
+      // Runs if false
+    }
+              </code>
+            </pre>
+          </p>
+          <p>
+            else if statements
+            <pre>
+              <code>
+    if (conditionalStatement1){
+      // Runs if true
+    } else if (conditionalStatement2) {
+      // Runs if true
+    } else {
+      // Runs if false
+    }
+              </code>
+            </pre>
+          </p>
+          <p>
+            Switch statemnts
+            <pre>
+              <code>
+    switch (someVariable) {
+      case caseOne :
+        // Something happens
+        break;
+      case caseTwo :
+        // Something happens
+        break;
+      case caseThree :
+        // Something happens
+        break;
+      default:
+        // Something happens
+        break;
+    }
+              </code>
+            </pre>
+          </p>
+        </section>
+        <br>
+        <section id="Loops" class="main-section">
+          <header>
+            Loops
+          </header>
+          <p>
+            For Loop
+            <pre>
+              <code>
+    for (let i = 0; i < 5; i++){
+      // Do something
+    }
+              </code>
+            </pre>
+          </p>
+          <p>
+            While Loop
+            <pre>
+              <code>
+    while (testCondition) {
+      // Do something
+    }
+              </code>
+            </pre>
+          </p>
+          <p>
+            Do While Loop
+            <pre>
+              <code>
+    do {
+      // Do something
+    } while (testCondition);
+              </code>
+            </pre>
+          </p>
+          <p>
+            Keywords usable in loops
+            <code class="code-inline">break</code>, exits a loop
+            <code class="code-inline">continue</code>, skips to the next iteration
+          </p>
+        </section>
+        <br>
+        <section id="Functions" class="main-section">
+          <header>
+            Functions
+          </header>
+          <p>
+            Functions as values
+            <pre>
+              <code>
+    let func1 = function(a, b){
+      return a * b;
+    };
+              </code>
+            </pre>
+          </p>
+          <p>
+            Declaration Notation
+            <pre>
+              <code>
+    function func2(a,b,c){
+      return a + b - c;
+    }
+              </code>
+            </pre>
+          </p>
+          <p>
+            ES6 Arrow Functions
+          <pre>
+            <code>
+    const func3 = () => 2 + 2;
+            </code>
+            </pre>
+          </p>
+        </section>
+        <br>
+        <section id="Data_Structures" class="main-section">
+          <header>
+            Data Structures
+          </header>
+          <p>
+            Arrays
+            <pre>
+              <code>
+    let myArray = [];
+              </code>
+            </pre>
+          </p>
+          <p>
+            Some Array Methods:
+            <ul>
+              <li><code class="code-inline">push()</code></li>
+              <li><code class="code-inline">pop()</code></li>
+              <li><code class="code-inline">unshift()</code></li>
+              <li><code class="code-inline">shift()</code></li>
+              <li><code class="code-inline">indexOf()</code></li>
+              <li><code class="code-inline">lastIndexOf()</code></li>
+            </ul>
+          </p>
+          <p>
+            For-of Loop
+            <pre>
+              <code>
+    for (let element of myArray){
+      // Do something
+    }
+              </code>
+            </pre>
+          </p>
+          <p>
+            Object Declaration
+            <pre>
+              <code>
+    let obj1 = {
+      key1 : value1,
+      key2 : value2
+    };
+
+    console.log(obj1.key1); // value1
+              </code>
+            </pre>
+          </p>
+          <p>
+            Things you can do with Objects:
+            <pre>
+              <code>
+    delete objName.keyName;
+    "keyName" in myObj;
+    Object.keys(myObj);
+    Object.assign(obj1, obj2);
+              </code>
+            </pre>
+          </p>
+        </section>
+        <br>
+        <section id="JSON" class="main-section">
+          <header>
+            JSON
+          </header>
+          <p>
+            JavaScript Object Notation
+            <ul>
+              <li>"JavaScript Object Notation"</li>
+              <li>All property names are surrounded by double quotes</li>
+              <li>Nothing that requires computation is allowed</li>
+              <li>No comments are allowed</li>
+              <li><code class="code-inline">JSON.stringify()</code> takes JavaScript and turns it into JSON</li>
+              <li><code class="code-inline">JSON.parse()</code> takes JSON and turns it into JavaScript</li>
+            </ul>
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
