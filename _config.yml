@@ -18,7 +18,7 @@ email: luandy64@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is the website I designed and implemented to fulfill the Technical
   Documentation Page project by FreeCodeCamp.
-baseurl: "/FCC-Technical-Documentation-Page" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  
